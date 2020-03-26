@@ -9,7 +9,7 @@ The source image data come from SIDD: https://www.eecs.yorku.ca/~kamel/sidd/data
 ### model
 
 1st Submit:
-
+https://www.dropbox.com/s/lwm33zpm00z4850/submit1.pth?dl=0
 2nd Submit:
 
 3rd Submit:
@@ -17,7 +17,7 @@ The source image data come from SIDD: https://www.eecs.yorku.ca/~kamel/sidd/data
 ### generated testing frames result:
 
 1st Submit:
-
+https://www.dropbox.com/s/x1tjras7zzvk13z/1st_generated_results.zip?dl=0
 2nd Submit:
 
 3rd Submit: 
