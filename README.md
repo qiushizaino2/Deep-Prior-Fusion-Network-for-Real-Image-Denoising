@@ -18,6 +18,10 @@ $cd Final
 
 $python test_result_raw.py
 
+For training phase:
+
+Release in future
+
 ### Contact
 If you have any questions, feel free to contact:
 - Yanpeng Cao (caoyp@zju.edu.cn)
