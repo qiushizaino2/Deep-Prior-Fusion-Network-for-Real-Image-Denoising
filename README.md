@@ -32,7 +32,9 @@ Pytorch: https://pytorch.org/
 ### Usage
 
 - For generate final testing result:
+
   -place the siddplus_test_noisy_raw.mat under the folder Final
+  
   $cd Final
 
   $python test_result_raw.py
