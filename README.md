@@ -13,13 +13,13 @@ Pytorch: https://pytorch.org/
 
 ### Usage
 
-For generate final testing result:
+- For generate final testing result:
 
 $cd Final
 
 $python test_result_raw.py
 
-For training phase:
+- For training phase:
 
 Release in future
 
