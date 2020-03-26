@@ -15,13 +15,13 @@ Pytorch: https://pytorch.org/
 
 - For generate final testing result:
 
-$cd Final
+  $cd Final
 
-$python test_result_raw.py
+  $python test_result_raw.py
 
 - For training phase:
 
-Release in future
+  Release in future
 
 ### Contact
 If you have any questions, feel free to contact:
