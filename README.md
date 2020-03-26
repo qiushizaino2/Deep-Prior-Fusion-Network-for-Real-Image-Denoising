@@ -12,9 +12,9 @@ Pytorch: https://pytorch.org/
 
 ### Usage
 
-for generate final testing result:
-
-python test_result_raw.py
+For generate final testing result:
+$cd Final
+$python test_result_raw.py
 
 ### Contact
 If you have any questions, feel free to contact:
