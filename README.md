@@ -14,7 +14,7 @@ The source image data come from SIDD: https://www.eecs.yorku.ca/~kamel/sidd/data
 
 3rd Submit:
 
-### generate result:
+### generated testing frames result:
 
 1st submit:
 
