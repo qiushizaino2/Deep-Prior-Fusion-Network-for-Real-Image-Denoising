@@ -1,12 +1,13 @@
 # Deep-Prior-Fusion-Network-for-Real-Image-Denoising
 NTIRE 2020 Real Image Denoising Challenge - ZJU231
+
 Ye Zhangyu, Lu Xiwen, Wu Yaqi, Cao Yanpeng, Yang Jiangxin, Cao Yanlong, Tang Siliang
 
 ### Dataset
 The source image data come from SIDD: https://www.eecs.yorku.ca/~kamel/sidd/dataset.php
 
 ### Implementations
-This code is based on Pytorch. Thanks to the contributors of Pytorch.
+This code is based on Pytorch 1.0. Thanks to the contributors of Pytorch.
 
 Pytorch: https://pytorch.org/
 
