@@ -13,7 +13,9 @@ Pytorch: https://pytorch.org/
 ### Usage
 
 For generate final testing result:
+
 $cd Final
+
 $python test_result_raw.py
 
 ### Contact
