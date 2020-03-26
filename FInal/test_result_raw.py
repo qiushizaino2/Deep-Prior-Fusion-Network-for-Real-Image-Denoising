@@ -141,7 +141,7 @@ def vali_unpack(img):
 def denoiser(noisy,net,img_bayer_pattern,nlfs,Device):
     # TODO: plug in your denoiser here
     Input=noisy
-
+    #print(Input.shape)
     #Input=vali_pack(vali_pre_process(Input,img_bayer_pattern))
     #Input=torch.Tensor(Input).to(Device)
     #denoised = net(Input)
@@ -188,9 +188,9 @@ def denoiser(noisy,net,img_bayer_pattern,nlfs,Device):
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--Model_dir', type=str, default='./checkpoints/Denoising_nlfc_res512_dct/', help='Model directory')
-parser.add_argument('--Model', type=str, default='190_networks.pth', help='Name of the model')
-parser.add_argument('--GPU_id', type=str, default='2', help='GPU_id')
+parser.add_argument('--Model_dir', type=str, default='./', help='Model directory')
+parser.add_argument('--Model', type=str, default='submit2.pth', help='Name of the model')
+parser.add_argument('--GPU_id', type=str, default='3', help='GPU_id')
 
 args = parser.parse_args()
 
@@ -206,16 +206,17 @@ noisy_fn = 'siddplus_test_noisy_raw.mat'
 noisy_key = 'siddplus_test_noisy_raw'
 noisy_mat = loadmat(os.path.join(work_dir, noisy_fn))[noisy_key]
 
-bayer_pattern = os.path.join(work_dir, "siddplus_bayer_patterns.csv")
+bayer_pattern = os.path.join(work_dir, "ssidplus_bayer_patterns.csv")
 bayer = {}
 with open(bayer_pattern, 'r') as f:
-
-    reader = csv.reader(f)
+    next(f)
     i=0
-    for row in reader:
-        bayer[i] = row[0]
+    for row in f:
+        row=row.strip('\n')
+        bayer[i] = row
         i+=1
 
+#print(bayer)
 nlfs = []
 
 with open( os.path.join(work_dir, "siddplus_test_nlfs.csv")) as file: 
@@ -227,6 +228,7 @@ with open( os.path.join(work_dir, "siddplus_test_nlfs.csv")) as file:
         nlf=list(nlf)
         nlfs.append(nlf)
 
+#print(nlfs)
 
 #network load
 device = torch.device("cuda:" + str(args.GPU_id) if torch.cuda.is_available() else "cpu")
@@ -245,7 +247,7 @@ for i in range(n_im):
     noisy = np.reshape(noisy_mat[i, :, :], (h, w))
     denoised,runtime_sig = denoiser(noisy,net,bayer[i//32],nlfs[i//32],device)
     results[i, :, :] = denoised
-    print(runtime_sig)
+    #print(runtime_sig)
     all_run_time+=runtime_sig
 # create results directory
 res_dir = 'res_dir'
